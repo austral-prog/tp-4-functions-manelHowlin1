@@ -9,14 +9,13 @@ def is_positive(n):
     return n > 0
 
 # ---- Función a implementar ----
-def classify_number():
-    if n == 0:
-        return "zero"
-    elif is_even(n) and is_positive(n):
+    if is_even(n) and is_positive(n) and n != 0:
         return "positive even"
-    elif is_even(n) and not is_positive(n):
+    elif is_even(n) and not is_positive(n) and n != 0:
         return "negative even"
-    elif not is_even(n) and is_positive(n):
+    elif not is_even(n) and is_positive(n) and n != 0:
         return "positive odd"
-    elif not is_even(n) and not is_positive(n):
+    elif not is_even(n) and not is_positive(n) and n != 0:
         return "negative odd"
+    else:
+        return "zero"
